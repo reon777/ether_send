@@ -1,14 +1,19 @@
 ## 概要
 
-ローカルのブラウザで etherrium の署名を行う
+ブラウザで etherrium の署名と送金行う
 
 ## 実行
 
-index.html をブラウザで表示してコンソールを確認する
+- index.htmlの中の設定部分を変更する
+- index.html をブラウザで表示してコンソールを確認する
 
 ## 利用モジュール
 
+etherreum-tx
 https://github.com/ethereumjs/browser-builds/blob/master/dist/ethereumjs-tx/ethereumjs-tx-1.3.3.min.js
+
+web3
+https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/
 
 ## 参考
 
