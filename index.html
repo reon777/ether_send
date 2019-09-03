@@ -1,0 +1,41 @@
+<html>
+  <body>
+    <script
+      type="module"
+      src="./node_modules/ethereumjs-tx/dist/transaction.js"
+    ></script>
+    test
+    <script type="text/javascript">
+      window.onload = function() {
+        try {
+          const EthereumTx = require('ethereumjs-tx').Transaction
+          const privateKey = Buffer.from(
+            'e331b6d69882b4cb4ea581d88e0b604039a3de5967688d3dcffdd2270c0fd109',
+            'hex'
+          )
+
+          const txParams = {
+            nonce: '0x00',
+            gasPrice: '0x09184e72a000',
+            gasLimit: '0x2710',
+            to: '0x0000000000000000000000000000000000000000',
+            value: '0x00',
+            data:
+              '0x7f7465737432000000000000000000000000000000000000000000000000000000600057'
+          }
+
+          // The second parameter is not necessary if these values are used
+          const tx = new EthereumTx(txParams, {
+            chain: 'mainnet',
+            hardfork: 'petersburg'
+          })
+          tx.sign(privateKey)
+          const serializedTx = tx.serialize()
+          //var sign = sign_ethereum(1, "daa8751566a37dc738d1e173becbff86286a1fbdc7b1c2cc6ab133e62c9b4cf3", "0x7ac05bc05c1c6e836ac1e22542ff4c1883590334", 0.1, 8000000, 21000);
+        } catch (e) {
+          console.log(e.message)
+        }
+      }
+    </script>
+  </body>
+</html>
