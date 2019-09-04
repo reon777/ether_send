@@ -1,7 +1,7 @@
 ## 概要
 
-ブラウザで etherrium の署名と送金を行うツール  
-npm モジュールではなくブラウザで実行するところがポイント
+JavaScript(ブラウザ）で ethereum の署名と送金を行うツールです  
+ポイントは署名をローカルで行うところと、npm モジュールではなくブラウザで実行するところです
 
 ## 実行方法
 
@@ -10,6 +10,8 @@ npm モジュールではなくブラウザで実行するところがポイン�
 - 結果をコンソールから確認する
 
 ## 利用モジュール
+
+以下のモジュールをダウンロードして使ってます
 
 etherreum-tx  
 https://github.com/ethereumjs/browser-builds/blob/master/dist/ethereumjs-tx/ethereumjs-tx-1.3.3.min.js
