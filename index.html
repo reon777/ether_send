@@ -5,7 +5,6 @@
     <script src="main.js"></script>
     <script>
       window.addEventListener('load', async function() {
-
         // metamaskを事前にchromeにインストールしておくこと
         const web3js = new Web3(web3.currentProvider)
 
@@ -16,9 +15,7 @@
         const amount = 0.0001
 
         // 署名
-        const nonce = await web3js.eth.getTransactionCount(
-          from
-        )
+        const nonce = await web3js.eth.getTransactionCount(from)
         console.log('nonce: ' + nonce)
         const sign = sign_ethereum(
           nonce,
